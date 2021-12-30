@@ -215,13 +215,12 @@ public class CalculatorClient extends JPanel implements ActionListener{
 			}
 		}
     
-    public static void main(String[] args) throws NotBoundException, MalformedURLException, RemoteException{
+    public static void main(String[] args){
         
         JFrame frame = new JFrame();
         frame.setLayout(new BorderLayout());
         frame.add(new CalculatorClient(), BorderLayout.CENTER);
         frame.pack();
-        //CalculatorClient client = new CalculatorClient();
         frame.setVisible(true);
         
     }

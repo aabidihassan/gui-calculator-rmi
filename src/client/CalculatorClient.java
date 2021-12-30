@@ -126,30 +126,29 @@ public class CalculatorClient extends JPanel implements ActionListener{
 			{
 				num1 = Double.parseDouble(text.getText());
 				operation = 1;
-				//text.setText("");
+				text.setText("");
 			} //- operation
     		if(AE.getSource()==opButtons[3])
 			{
     			num1 = Double.parseDouble(text.getText());
 				operation = 2;
-				//text.setText("");
+				text.setText("");
 			}//* operation
     		if(AE.getSource()==opButtons[4])
 			{
     			num1 = Double.parseDouble(text.getText());
 				operation = 3;
-				//text.setText("");
+				text.setText("");
 			}//divide operation
     		if(AE.getSource()==opButtons[5])
 			{
     			num1 = Double.parseDouble(text.getText());
 				operation = 4;
-				//text.setText("");
+				text.setText("");
 			}//= equals operation, depending on which operation has been set it will go to that option
     		if(AE.getSource()==opButtons[1])
 			{
     			num2 = Double.parseDouble(text.getText());
-				
     			if(operation == 1){
     				sum();
     			} else if(operation == 2){
@@ -169,7 +168,6 @@ public class CalculatorClient extends JPanel implements ActionListener{
 			try
 			{
 				ICalculatorRemote calculator=(ICalculatorRemote)Naming.lookup("rmi://localhost:1099/calculator");
-                                text.setText("");
 				ans=calculator.addition(num1,num2);
 			}
 			catch(Exception ex)
@@ -183,7 +181,6 @@ public class CalculatorClient extends JPanel implements ActionListener{
 			try
 			{
 				ICalculatorRemote calculator=(ICalculatorRemote)Naming.lookup("rmi://localhost:1099/calculator");
-                                text.setText("");
 				ans=calculator.soustraction(num1,num2);
 			}
 			catch(Exception ex)
@@ -197,7 +194,6 @@ public class CalculatorClient extends JPanel implements ActionListener{
 			try
 			{
 				ICalculatorRemote calculator=(ICalculatorRemote)Naming.lookup("rmi://localhost:1099/calculator");
-                                text.setText("");
 				ans=calculator.multiplication(num1,num2);
 			}
 			catch(Exception ex)
@@ -211,7 +207,6 @@ public class CalculatorClient extends JPanel implements ActionListener{
 			try
 			{
 				ICalculatorRemote calculator=(ICalculatorRemote)Naming.lookup("rmi://localhost:1099/calculator");
-                                text.setText("");
 				ans=calculator.division(num1,num2);
 			}
 			catch(Exception ex)
